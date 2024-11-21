@@ -76,6 +76,6 @@ void main (void)
         vec3 half1 = normalize (direction1 + eyedirn) ;  
         vec4 col1 = ComputeLight(direction1, light1color, normal, half1, diffuse, specular, shininess) ;
         
-        fragColor = ambient + col0 + col1 + vec4(color, 0.1f); 
+        fragColor = (ambient + col0 + col1) * vec4(color, 1.0f); 
         }
 }
